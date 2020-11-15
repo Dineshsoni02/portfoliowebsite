@@ -1,0 +1,232 @@
+.flex {
+  display: flex;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.sticky{
+  position: fixed;
+}
+$black: #071013ff;
+$blue: #23b5d3ff;
+$pr-blue: #75abbcff;
+$t-blue: #a2aebbff;
+$optional: #dfe0e2ff;
+
+$gradient-top: linear-gradient(
+  0deg,
+  #071013ff,
+  #23b5d3ff,
+  #75abbcff,
+  #a2aebbff,
+  #dfe0e2ff
+);
+$gradient-right: linear-gradient(
+  90deg,
+  #071013ff,
+  #23b5d3ff,
+  #75abbcff,
+  #a2aebbff,
+  #dfe0e2ff
+);
+$gradient-bottom: linear-gradient(
+  180deg,
+  #071013ff,
+  #23b5d3ff,
+  #75abbcff,
+  #a2aebbff,
+  #dfe0e2ff
+);
+$gradient-left: linear-gradient(
+  270deg,
+  #071013ff,
+  #23b5d3ff,
+  #75abbcff,
+  #a2aebbff,
+  #dfe0e2ff
+);
+$gradient-top-right: linear-gradient(
+  45deg,
+  #071013ff,
+  #23b5d3ff,
+  #75abbcff,
+  #a2aebbff,
+  #dfe0e2ff
+);
+$gradient-bottom-right: linear-gradient(
+  135deg,
+  #071013ff,
+  #23b5d3ff,
+  #75abbcff,
+  #a2aebbff,
+  #dfe0e2ff
+);
+$gradient-top-left: linear-gradient(
+  225deg,
+  #071013ff,
+  #23b5d3ff,
+  #75abbcff,
+  #a2aebbff,
+  #dfe0e2ff
+);
+$gradient-bottom-left: linear-gradient(
+  315deg,
+  #071013ff,
+  #23b5d3ff,
+  #75abbcff,
+  #a2aebbff,
+  #dfe0e2ff
+);
+$gradient-radial: radial-gradient(
+  #071013ff,
+  #23b5d3ff,
+  #75abbcff,
+  #a2aebbff,
+  #dfe0e2ff
+);
+
+//fonts-family
+
+$logo: "Sarina", cursive;
+$heading: "Raleway", sans-serif;
+
+::-webkit-scrollbar {
+  width: 13px;
+}
+::-webkit-scrollbar-thumb {
+  background: $gradient-top;
+  border-radius: 15rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: $gradient-radial;
+  border-radius: 15rem;
+}
+
+* {
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  min-width: 200px;
+}
+
+nav {
+  background: $black;
+  width: 100%;
+  height: object-fit;
+  justify-content: space-around;
+  align-items: center;
+  .logo {
+    font-family: $logo;
+    font-size: 2.1rem;
+    a {
+      color: $optional;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
+
+    li {
+      margin-left: 1rem;
+      a {
+        color: $optional;
+      }
+    }
+  }
+  .hamburger {
+    color: $blue;
+    font-size: 1.5rem;
+    display: none;
+    .fa {
+      color: $optional;
+    }
+  }
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+
+  background-color: $black;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  &::before {
+    content: "";
+    position: absolute;
+    background: url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: screen;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    opacity: 0.52;
+    // clip-path: ellipse(22rem 22rem at 89% 89%);
+  }
+  .hero_text {
+    height: 100%;
+    width: 100%;
+    color: lavender;
+    position: relative;
+    z-index: 5;
+    text-align: center;
+  }
+}
+.thought {
+  height: 100vh;
+  width: 100%;
+  background: $t-blue;
+}
+.about {
+  height: 100vh;
+  width: 100%;
+  background: $blue;
+  overflow: hidden;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 630px) {
+  nav {
+    .hamburger {
+      color: $blue;
+      font-size: 1.5rem;
+      display: block !important;
+    }
+    ul {
+      display: none !important;
+    }
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
