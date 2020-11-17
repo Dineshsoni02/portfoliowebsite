@@ -145,10 +145,15 @@ nav ul {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 nav ul li {
   padding-left: 15px;
+  font-family: 'Syncopate', sans-serif;
   font-weight: bolder;
 }
 
@@ -185,6 +190,7 @@ nav .hamburger .fa {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: 'Syncopate', sans-serif;
 }
 
 .container::before {
@@ -202,18 +208,108 @@ nav .hamburger .fa {
 }
 
 .container .hero_text {
-  height: 100%;
+  height: 20vh;
   width: 100%;
-  color: lavender;
+  color: white;
   position: relative;
   z-index: 5;
   text-align: center;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Syncopate', sans-serif;
+}
+
+.container .hero_text h4 {
+  color: rgba(255, 255, 255, 0.774);
+  font-size: 1.5rem;
+}
+
+.container .hero_text h1 {
+  font-size: 3rem;
+  margin: 25px 0;
+}
+
+.container .hero_text h1 span {
+  color: #23b5d3ff;
+  font-family: "Sarina", cursive;
+  font-family: 'Zilla Slab Highlight', cursive;
+  font-size: 4.2rem;
+}
+
+.container .hero_text .btngr button {
+  padding: 0.51rem;
+  border-radius: 0.05rem;
+  border: 2px solid #23b5d3ff;
+  cursor: pointer;
+  font-size: 0.81rem;
+  font-weight: bolder;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-family: 'Syncopate', sans-serif;
+}
+
+.container .hero_text .btngr .btn {
+  color: #000000;
+  background: #23b5d3ff;
+  border: 2px solid #23b5d3ff;
+}
+
+.container .hero_text .btngr .btn:hover {
+  background: transparent;
+  color: white;
+}
+
+.container .hero_text .btngr .btn2 {
+  color: #dfe0e2ff;
+  background: transparent;
+  border: 2px solid #23b5d3ff;
+}
+
+.container .hero_text .btngr .btn2:hover {
+  background: linear-gradient(225deg, #071013ff, #23b5d3ff, #75abbcff, #a2aebbff, #dfe0e2ff);
+  color: black;
 }
 
 .thought {
-  height: 100vh;
+  height: 50%;
   width: 100%;
-  background: #a2aebbff;
+  background: #dfe0e2ff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Syncopate', sans-serif;
+}
+
+.thought h1 {
+  color: #000000;
+  font-size: 4.5rem;
+  font-weight: bolder;
+  font-family: 'Akronim', cursive;
+  margin: 2rem 0;
+}
+
+.thought p {
+  color: rgba(0, 0, 0, 0.916);
+  font-size: 1.2rem;
 }
 
 .about {
@@ -221,6 +317,7 @@ nav .hamburger .fa {
   width: 100%;
   background: #23b5d3ff;
   overflow: hidden;
+  font-family: 'Syncopate', sans-serif;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -235,6 +332,27 @@ nav .hamburger .fa {
   }
   nav .active.nav_links {
     visibility: visible;
+  }
+  .container .hero_text h4 {
+    color: rgba(255, 255, 255, 0.774);
+    font-size: 1.2rem;
+  }
+  .container .hero_text h1 {
+    font-size: 1.5rem;
+    margin: 5px 0;
+  }
+  .container .hero_text h1 span {
+    color: #23b5d3ff;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 2.6rem;
+  }
+  .thought h1 {
+    font-size: 1.8rem;
+    font-family: 'Akronim', cursive;
+  }
+  .thought p {
+    color: black;
+    font-size: 0.7rem;
   }
 }
 

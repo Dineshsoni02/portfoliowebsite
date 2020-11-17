@@ -1,3 +1,4 @@
+
 $black: #000000;
 $blue: #23b5d3ff;
 $pr-blue: #75abbcff;
@@ -101,6 +102,7 @@ $heading: "Raleway", sans-serif;
   li a,
   .logo a {
     color: $black;
+    
   }
   .hamburger .fa {
     color: black;
@@ -174,15 +176,18 @@ nav {
     font-size: 2.1rem;
     a {
       color: $optional;
+      
     }
   }
   ul {
-    display:flex;
+    display: flex;
     justify-content: space-around;
     align-items: center;
     font-size: 1.2rem;
+    user-select: none;
     li {
       padding-left: 15px;
+      font-family: 'Syncopate', sans-serif;
       font-weight: bolder;
       &:hover a {
         background-color: #17d8ffd5;
@@ -209,11 +214,11 @@ nav {
 .container {
   height: 100vh;
   width: 100%;
-
   background-color: $black;
   position: relative;
   justify-content: center;
   align-items: center;
+  font-family: 'Syncopate', sans-serif;
   &::before {
     content: "";
     position: absolute;
@@ -229,24 +234,90 @@ nav {
     // clip-path: ellipse(22rem 22rem at 89% 89%);
   }
   .hero_text {
-    height: 100%;
+    height: 20vh;
     width: 100%;
-    color: lavender;
+    color: white;
     position: relative;
     z-index: 5;
     text-align: center;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Syncopate', sans-serif;
+    h4 {
+      color: rgba(255, 255, 255, 0.774);
+      font-size: 1.5rem;
+    }
+    h1 {
+      font-size: 3rem;
+      margin: 25px 0;
+      span {
+        color: $blue;
+        font-family: $logo;
+        font-family: 'Zilla Slab Highlight', cursive;
+        font-size: 4.2rem;
+      }
+    }
+    .btngr {
+      button {
+        padding: 0.51rem;
+        border-radius: 0.05rem;
+        border: 2px solid $blue;
+        cursor: pointer;
+        font-size: 0.81rem;
+        font-weight: bolder;
+        transition: all 0.3s;
+        font-family: 'Syncopate', sans-serif;
+      }
+      .btn {
+        color: $black;
+        background: $blue;
+        border: 2px solid $blue;
+        &:hover {
+          background: transparent;
+          color: white;
+        }
+      }
+      .btn2 {
+        color: $optional;
+        background: transparent;
+        border: 2px solid $blue;
+        &:hover {
+          background: $gradient-top-left;
+          color: black;
+        }
+      }
+    }
   }
 }
 .thought {
-  height: 100vh;
+  height: 50%;
   width: 100%;
-  background: $t-blue;
+  background: $optional;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Syncopate', sans-serif;
+  h1 {
+    color: $black;
+    font-size: 4.5rem;
+    font-weight: bolder;
+    font-family: 'Akronim', cursive;
+    margin: 2rem 0;
+  }
+  p {
+    color: rgba(0, 0, 0, 0.916);
+    font-size: 1.2rem;
+  }
 }
 .about {
   height: 100vh;
   width: 100%;
   background: $blue;
   overflow: hidden;
+  font-family: 'Syncopate', sans-serif;
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 768px) {
@@ -254,14 +325,41 @@ nav {
     .hamburger {
       color: $blue;
       font-size: 1.5rem;
-      display: block ;
+      display: block;
     }
     ul {
       // display: none !important;
       visibility: hidden;
     }
-    .active.nav_links{
+    .active.nav_links {
       visibility: visible;
+    }
+  }
+  .container {
+    .hero_text {
+      h4 {
+        color: rgba(255, 255, 255, 0.774);
+        font-size: 1.2rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+        margin: 5px 0;
+        span {
+          color: #23b5d3ff;
+          font-family: 'Bungee Shade', cursive;
+          font-size: 2.6rem;
+        }
+      }
+    }
+  }
+  .thought {
+    h1 {
+      font-size: 1.8rem;
+      font-family: 'Akronim', cursive;
+    }
+    p {
+      color: rgba(0, 0, 0, 1);
+      font-size: 0.7rem;
     }
   }
 }
