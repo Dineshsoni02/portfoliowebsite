@@ -25,9 +25,12 @@
   z-index: 12;
 }
 
-.sticky li a,
-.sticky .logo a {
+.sticky li a {
   color: #000000;
+}
+
+.sticky .logo a {
+  color: #238386;
 }
 
 .sticky .hamburger .fa {
@@ -133,6 +136,7 @@ nav .logo {
 
 nav .logo a {
   color: #dfe0e2ff;
+  color: #23b5d3ff;
 }
 
 nav ul {
@@ -153,7 +157,7 @@ nav ul {
 
 nav ul li {
   padding-left: 15px;
-  font-family: 'Syncopate', sans-serif;
+  font-family: "Syncopate", sans-serif;
   font-weight: bolder;
 }
 
@@ -190,7 +194,7 @@ nav .hamburger .fa {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'Syncopate', sans-serif;
+  font-family: "Syncopate", sans-serif;
 }
 
 .container::before {
@@ -228,7 +232,7 @@ nav .hamburger .fa {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'Syncopate', sans-serif;
+  font-family: "Syncopate", sans-serif;
 }
 
 .container .hero_text h4 {
@@ -244,7 +248,7 @@ nav .hamburger .fa {
 .container .hero_text h1 span {
   color: #23b5d3ff;
   font-family: "Sarina", cursive;
-  font-family: 'Zilla Slab Highlight', cursive;
+  font-family: "Zilla Slab Highlight", cursive;
   font-size: 4.2rem;
 }
 
@@ -257,13 +261,14 @@ nav .hamburger .fa {
   font-weight: bolder;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  font-family: 'Syncopate', sans-serif;
+  font-family: "Syncopate", sans-serif;
 }
 
 .container .hero_text .btngr .btn {
   color: #000000;
   background: #23b5d3ff;
   border: 2px solid #23b5d3ff;
+  margin-right: -0.55rem;
 }
 
 .container .hero_text .btngr .btn:hover {
@@ -296,15 +301,17 @@ nav .hamburger .fa {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: 'Syncopate', sans-serif;
+  font-family: "Syncopate", sans-serif;
 }
 
 .thought h1 {
   color: #000000;
   font-size: 4.5rem;
   font-weight: bolder;
-  font-family: 'Akronim', cursive;
+  font-family: "Akronim", cursive;
   margin: 2rem 0;
+  -webkit-filter: drop-shadow(1rem 2.1rem 0.45rem black);
+          filter: drop-shadow(1rem 2.1rem 0.45rem black);
 }
 
 .thought p {
@@ -315,9 +322,66 @@ nav .hamburger .fa {
 .about {
   height: 100vh;
   width: 100%;
-  background: #23b5d3ff;
-  overflow: hidden;
-  font-family: 'Syncopate', sans-serif;
+  background: rgba(5, 5, 5, 0.9);
+  position: relative;
+}
+
+.about .top {
+  width: 100%;
+  height: 20%;
+  background: violet;
+}
+
+.about .top .cntnt {
+  background: rgba(5, 5, 5, 0.9);
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.about .top .cntnt h6 {
+  font-size: 1rem;
+  color: #dfe0e2ff;
+}
+
+.about .top .cntnt h2 {
+  font-size: 4rem;
+  font-family: 'Audiowide', cursive;
+}
+
+.about .btm {
+  background: salmon;
+  width: 100%;
+  height: 80%;
+}
+
+.about .btm .left {
+  background: sandybrown;
+  width: 30%;
+  height: 100%;
+}
+
+.about .btm .right {
+  width: 70%;
+  height: 100%;
+  background: rosybrown;
+}
+
+.about .btm .right .content {
+  padding: 120px;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -343,16 +407,19 @@ nav .hamburger .fa {
   }
   .container .hero_text h1 span {
     color: #23b5d3ff;
-    font-family: 'Bungee Shade', cursive;
+    font-family: "Bungee Shade", cursive;
     font-size: 2.6rem;
   }
   .thought h1 {
     font-size: 1.8rem;
-    font-family: 'Akronim', cursive;
+    font-family: "Akronim", cursive;
+    -webkit-filter: drop-shadow(1rem 1.5rem 0.2rem black);
+            filter: drop-shadow(1rem 1.5rem 0.2rem black);
   }
   .thought p {
     color: black;
     font-size: 0.7rem;
+    padding: 0 1rem;
   }
 }
 

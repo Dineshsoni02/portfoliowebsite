@@ -1,10 +1,9 @@
-
 $black: #000000;
+$optional: #dfe0e2ff;
 $blue: #23b5d3ff;
 $pr-blue: #75abbcff;
 $t-blue: #a2aebbff;
-$optional: #dfe0e2ff;
-
+$fadeblack: rgba(5, 5, 5, 0.9);
 $gradient-top: linear-gradient(
   0deg,
   #071013ff,
@@ -99,10 +98,11 @@ $heading: "Raleway", sans-serif;
   left: 0;
   background: $optional;
   z-index: 12;
-  li a,
-  .logo a {
+  li a {
     color: $black;
-    
+  }
+  .logo a {
+    color: rgb(35, 131, 134);
   }
   .hamburger .fa {
     color: black;
@@ -173,10 +173,11 @@ nav {
   align-items: center;
   .logo {
     font-family: $logo;
+
     font-size: 2.1rem;
     a {
       color: $optional;
-      
+      color: $blue;
     }
   }
   ul {
@@ -187,7 +188,7 @@ nav {
     user-select: none;
     li {
       padding-left: 15px;
-      font-family: 'Syncopate', sans-serif;
+      font-family: "Syncopate", sans-serif;
       font-weight: bolder;
       &:hover a {
         background-color: #17d8ffd5;
@@ -218,7 +219,7 @@ nav {
   position: relative;
   justify-content: center;
   align-items: center;
-  font-family: 'Syncopate', sans-serif;
+  font-family: "Syncopate", sans-serif;
   &::before {
     content: "";
     position: absolute;
@@ -245,7 +246,7 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Syncopate', sans-serif;
+    font-family: "Syncopate", sans-serif;
     h4 {
       color: rgba(255, 255, 255, 0.774);
       font-size: 1.5rem;
@@ -256,7 +257,7 @@ nav {
       span {
         color: $blue;
         font-family: $logo;
-        font-family: 'Zilla Slab Highlight', cursive;
+        font-family: "Zilla Slab Highlight", cursive;
         font-size: 4.2rem;
       }
     }
@@ -269,7 +270,7 @@ nav {
         font-size: 0.81rem;
         font-weight: bolder;
         transition: all 0.3s;
-        font-family: 'Syncopate', sans-serif;
+        font-family: "Syncopate", sans-serif;
       }
       .btn {
         color: $black;
@@ -299,25 +300,70 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: 'Syncopate', sans-serif;
+  font-family: "Syncopate", sans-serif;
+
   h1 {
     color: $black;
     font-size: 4.5rem;
     font-weight: bolder;
-    font-family: 'Akronim', cursive;
+    font-family: "Akronim", cursive;
     margin: 2rem 0;
+    filter: drop-shadow(1rem 2.1rem 0.45rem black);
   }
   p {
     color: rgba(0, 0, 0, 0.916);
     font-size: 1.2rem;
   }
 }
-.about {
-  height: 100vh;
-  width: 100%;
-  background: $blue;
-  overflow: hidden;
-  font-family: 'Syncopate', sans-serif;
+.about{
+      height: 100vh;
+      width: 100%;
+      background: $fadeblack;
+      position: relative;
+        .top{
+          width: 100%;
+          height: 20%;
+          background: violet;
+          .cntnt{
+            background: $fadeblack;
+            color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            h6{
+              font-size: 1rem;
+              color: $optional;
+            }
+            h2{
+              font-size: 4rem;
+              font-family: 'Audiowide', cursive;
+            }
+          }
+        }
+        .btm{
+          background: salmon;
+          width: 100%;
+          height: 80%;
+          // justify-content: space-around;
+          // align-items: center;
+          .left{
+            background: sandybrown;
+            width: 30%;
+            height: 100%;
+          }
+          .right{
+            width: 70%;
+            height: 100%;
+            background: rosybrown;
+            .content{
+              padding: 120px;
+            }
+          }
+        }
+
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 768px) {
@@ -346,7 +392,7 @@ nav {
         margin: 5px 0;
         span {
           color: #23b5d3ff;
-          font-family: 'Bungee Shade', cursive;
+          font-family: "Bungee Shade", cursive;
           font-size: 2.6rem;
         }
       }
@@ -355,11 +401,13 @@ nav {
   .thought {
     h1 {
       font-size: 1.8rem;
-      font-family: 'Akronim', cursive;
+      font-family: "Akronim", cursive;
+      filter: drop-shadow(1rem 1.5rem 0.2rem black);
     }
     p {
       color: rgba(0, 0, 0, 1);
       font-size: 0.7rem;
+      padding: 0 1rem;
     }
   }
 }
