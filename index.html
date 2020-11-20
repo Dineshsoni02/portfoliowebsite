@@ -52,8 +52,11 @@
       href="https://fonts.googleapis.com/css2?family=Syncopate&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav class="navbar flex wrap">
@@ -61,7 +64,7 @@
       <div class="hamburger">
         <i class="fa fa-bars" aria-hidden="true"></i>
       </div>
-      <ul class="flex uppercase nav_links">
+      <ul class="uppercase nav_links">
         <li><a href="#home">home</a></li>
         <li><a href="#about">about</a></li>
         <li><a href="#skills">skills</a></li>
@@ -94,7 +97,7 @@
     <span id="about"></span>
     <section class="about wrap flex">
       <div class="top">
-        <div class="cntnt">  
+        <div class="cntnt">
           <h6>MY INTRO</h6>
           <h2>About Me</h2>
         </div>
@@ -144,6 +147,7 @@
       });
       var hamburger = document.querySelector(".hamburger");
       hamburger.addEventListener("click", (e) => {
+        console.log('sdasdsafas')
         hamburger.classList.toggle("activeburger");
         ul.classList.toggle("active");
         // hamburger.innerHTML = `<i class="fa fa-times" aria-hidden="true"></i>`;
