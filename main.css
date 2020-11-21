@@ -79,8 +79,8 @@ body {
 
 nav {
   background: rgba(5, 5, 5, 0.9);
-  -webkit-filter: drop-shadow(0 0 2.5rem #17d8ffd5);
-          filter: drop-shadow(0 0 2.5rem #17d8ffd5);
+  -webkit-filter: drop-shadow(0px -8px 1rem #17d8ffd5);
+          filter: drop-shadow(0px -8px 1rem #17d8ffd5);
   width: 100%;
   height: object-fit;
   -ms-flex-pack: distribute;
@@ -299,12 +299,12 @@ nav .hamburger .fa {
 }
 
 .thought {
-  height: 50%;
+  height: 40%;
   width: 100%;
   background: #dfe0e2ff;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -320,31 +320,31 @@ nav .hamburger .fa {
   font-size: 4.5rem;
   font-weight: bolder;
   font-family: "Akronim", cursive;
-  margin: 2rem 0;
-  -webkit-filter: drop-shadow(1rem 2.1rem 0.45rem black);
-          filter: drop-shadow(1rem 2.1rem 0.45rem black);
+  -webkit-filter: drop-shadow(0rem 0rem 2rem #17d8ffd5);
+          filter: drop-shadow(0rem 0rem 2rem #17d8ffd5);
 }
 
 .thought p {
   color: rgba(0, 0, 0, 0.916);
   font-size: 1.2rem;
+  font-weight: bolder;
 }
 
 .about {
   height: 100vh;
   width: 100%;
   background: rgba(5, 5, 5, 0.9);
-  position: relative;
 }
 
 .about .top {
   width: 100%;
   height: 20%;
   background: violet;
+  background: rgba(5, 5, 5, 0.9);
+  border-bottom: 0.1px solid rgba(114, 123, 131, 0.916);
 }
 
 .about .top .cntnt {
-  background: rgba(5, 5, 5, 0.9);
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -371,50 +371,120 @@ nav .hamburger .fa {
 .about .top .cntnt h2 {
   font-size: 4rem;
   font-family: "Audiowide", cursive;
+  color: #17d8ffd5;
 }
 
 .about .btm {
-  background: salmon;
+  background: rgba(5, 5, 5, 0.9);
   width: 100%;
   height: 80%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .about .btm .left {
-  background: sandybrown;
   width: 30%;
-  height: 100%;
+  height: 80%;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
   position: relative;
+  margin-top: 2rem;
 }
 
 .about .btm .left img {
+  border-radius: 1rem;
   overflow: hidden;
   opacity: 0.8;
-  width: 100%;
+  width: 90%;
   height: 100%;
   position: absolute;
   z-index: 2222;
-  left: 0;
+  right: 10px;
 }
 
 .about .btm .left img:hover {
   background-size: 120%;
   opacity: 1;
-  -webkit-filter: drop-shadow(10px 2px 1rem #17d8ffd5);
-          filter: drop-shadow(10px 2px 1rem #17d8ffd5);
-  -webkit-transform: rotateZ(-1deg);
-          transform: rotateZ(-1deg);
+  -webkit-filter: drop-shadow(-2px 0px 1rem #17d8ffd5);
+          filter: drop-shadow(-2px 0px 1rem #17d8ffd5);
 }
 
 .about .btm .right {
   width: 70%;
   height: 100%;
-  background: rosybrown;
+  background: rgba(5, 5, 5, 0.9);
+  margin-top: 2rem;
 }
 
 .about .btm .right .content {
+  color: #eedcdc;
+  background: rgba(5, 5, 5, 0.9);
   padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 80%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about .btm .right .content p {
+  padding-left: 2rem;
+  font-size: 1.2rem;
+  color: #d9d7e4;
+}
+
+.about .btm .right .content .prdetails {
+  background: rgba(5, 5, 5, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 50%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about .btm .right .content .prdetails .name {
+  width: 100%;
+  font-size: 1.5rem;
+  padding-left: 2rem;
+}
+
+.about .btm .right .content .prdetails .name .first {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 15%;
+}
+
+.about .btm .right .content .prdetails .name .first .fa {
+  font-size: 1rem;
+  color: #17d8ffd5;
+}
+
+.about .btm .right .content .prdetails .name .second {
+  cursor: pointer;
+  -webkit-user-select: all;
+     -moz-user-select: all;
+      -ms-user-select: all;
+          user-select: all;
+  color: #e5e2e2;
 }
 
 /* Extra small devices (phones, 600px and down) */
