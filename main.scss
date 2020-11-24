@@ -125,6 +125,8 @@ body {
   left: 0;
   background: $optional;
   z-index: 12;
+  transform: translateY(-90%);
+  transition: all 0.3s;
   li {
     a {
       color: $black;
@@ -139,15 +141,19 @@ body {
 
   li:hover {
     filter: drop-shadow(0rem 0rem 1rem rgb(0, 247, 255));
-
     a {
       color: white;
     }
   }
 }
 nav {
+  &:hover {
+    transform: translateY(0px);
+    transition: all 0.3s;
+    filter: drop-shadow(0px -2px 1rem $fadeblue);
+  }
   background: rgba(5, 5, 5, 0.9);
-  filter: drop-shadow(0px -8px 1rem $fadeblue);
+  filter: drop-shadow(0px 8px 1rem $fadeblue);
   width: 100%;
   height: object-fit;
   justify-content: space-around;
@@ -218,7 +224,6 @@ nav {
     }
   }
 }
-
 .container {
   height: 100vh;
   width: 100%;
@@ -324,7 +329,6 @@ nav {
   }
 }
 .about {
- 
   height: 100vh;
   width: 100%;
   background: $fadeblack;
@@ -430,49 +434,108 @@ nav {
   }
 }
 .socls {
-  background: chartreuse;
-  .cntnt {
-    background: $optional;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  &::before {
+    content: "socials";
+    position: absolute;
+    z-index: 1;
+    font-size: 4em;
+    letter-spacing: 8px;
+    // font-weight: 900;
+    top: 4em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.27);
+    writing-mode: vertical-rl;
+    writing-mode: horizontal-tb;
+    // writing-mode: vertical-lr;
+    font-family: "Asset", cursive;
+    // text-orientation: upright;
+    left: 5em;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+  .box {
+    color: ivory;
     width: 100%;
-    height: 91vh;
-    display: flex;
-    padding: 2rem;
-    .text_cnt {
-      background: $fadeblue;
-      flex: 1;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("https://images.pexels.com/photos/3022403/pexels-photo-3022403.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      top: 0;
+      left: 0;
+      // background: olive;
+      z-index:-1;
+      width: 50rem;
+      height: 100%;
+      opacity: 0.5;
+    }
+    .sleft {
+      // background: hotpink;
+      color: $fadeblack;
       display: flex;
       justify-content: center;
       align-items: center;
-      h1{
-        font-size: 3rem;
+      h1 {
+        font-size: 4.7em;
+        padding: 0 2em;
         font-family: $mainfont;
-        padding: 0 12rem;
-        line-height: 6rem;
       }
     }
-    .soclhndls {
-      display: flex;
-      justify-content: center;
+    .sryt {
+      display: grid;
+      grid-template-columns: repeat(2, 2fr);
+      grid-template-rows: repeat(3, 2fr);
+      background: #f9f9f9;
+      grid-gap: 3em;
+      grid-auto-columns: minmax(100px, auto);
+      grid-auto-rows: minmax(100px, auto);
+      padding: 3em;
       align-items: center;
-      flex-direction: column;
-      flex: 1.5;
-      background: white;
-      flex-wrap: wrap;
-      height: 100%;
-      width: 100%;
-      padding: 1rem;
-      .socialbx{
+      .socialbx {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background: white;
+        padding: 1em;
+        border-radius: 1em;
         height: fit-content;
-        width: 18rem;
-        background: $optional;
-        border: 1px solid black;
-        margin: 3rem;
-        padding: 20px;
-        border-radius: 2rem;
-        
-        &:hover{
-          background: $fadeblue;
-          color: black;
+        width: fit-content;
+        transition: ease 0.3s;
+        filter: drop-shadow(0 0 1rem #f9f9f96e);
+        &:hover {
+          background: #17d8ff4f;
+        }
+        .heading {
+          display: flex;
+          align-items: center;
+          margin: 3px 0;
+          .hlogo {
+            img {
+              width: 1.5em;
+              height: 1.7em;
+            }
+            padding: 0 10px;
+          }
+          h2 {
+            color: black;
+            font-family: $mainfont;
+            font-size: 1em;
+            text-align: center;
+            font-weight: 800;
+          }
+        }
+        .scltxt {
+          p {
+            color: $fadeblack;
+          }
         }
       }
     }
@@ -571,6 +634,7 @@ nav {
         }
       }
       .ryt {
+        padding-bottom: 0rem;
         img {
           width: 15rem;
           border: 12px solid #dfe0e2ff;

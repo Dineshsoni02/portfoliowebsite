@@ -54,6 +54,10 @@ body {
   left: 0;
   background: #dfe0e2ff;
   z-index: 12;
+  -webkit-transform: translateY(-90%);
+          transform: translateY(-90%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .sticky li a {
@@ -79,8 +83,8 @@ body {
 
 nav {
   background: rgba(5, 5, 5, 0.9);
-  -webkit-filter: drop-shadow(0px -8px 1rem #17d8ffd5);
-          filter: drop-shadow(0px -8px 1rem #17d8ffd5);
+  -webkit-filter: drop-shadow(0px 8px 1rem #17d8ffd5);
+          filter: drop-shadow(0px 8px 1rem #17d8ffd5);
   width: 100%;
   height: object-fit;
   -ms-flex-pack: distribute;
@@ -88,6 +92,15 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+nav:hover {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-filter: drop-shadow(0px -2px 1rem #17d8ffd5);
+          filter: drop-shadow(0px -2px 1rem #17d8ffd5);
 }
 
 nav .logo {
@@ -490,24 +503,59 @@ nav .hamburger .fa {
 }
 
 .socls {
-  background: chartreuse;
-}
-
-.socls .cntnt {
-  background: #dfe0e2ff;
   width: 100%;
-  height: 91vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 2rem;
+  height: 100vh;
+  position: relative;
 }
 
-.socls .cntnt .text_cnt {
-  background: #17d8ffd5;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.socls::before {
+  content: "socials";
+  position: absolute;
+  z-index: 1;
+  font-size: 4em;
+  letter-spacing: 8px;
+  top: 4em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.27);
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-writing-mode: horizontal-tb;
+      -ms-writing-mode: lr-tb;
+          writing-mode: horizontal-tb;
+  font-family: "Asset", cursive;
+  left: 5em;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.socls .box {
+  color: ivory;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.5fr;
+      grid-template-columns: 1fr 1.5fr;
+}
+
+.socls .box::before {
+  content: "";
+  position: absolute;
+  background: url("https://images.pexels.com/photos/3022403/pexels-photo-3022403.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 50rem;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.socls .box .sleft {
+  color: rgba(5, 5, 5, 0.9);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -519,53 +567,88 @@ nav .hamburger .fa {
           align-items: center;
 }
 
-.socls .cntnt .text_cnt h1 {
-  font-size: 3rem;
+.socls .box .sleft h1 {
+  font-size: 4.7em;
+  padding: 0 2em;
   font-family: "Syncopate", sans-serif;
-  padding: 0 12rem;
-  line-height: 6rem;
 }
 
-.socls .cntnt .soclhndls {
+.socls .box .sryt {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (2fr)[2];
+      grid-template-columns: repeat(2, 2fr);
+  -ms-grid-rows: (2fr)[3];
+      grid-template-rows: repeat(3, 2fr);
+  background: #f9f9f9;
+  grid-gap: 3em;
+  grid-auto-columns: minmax(100px, auto);
+  grid-auto-rows: minmax(100px, auto);
+  padding: 3em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socls .box .sryt .socialbx {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-flex: 1.5;
-      -ms-flex: 1.5;
-          flex: 1.5;
   background: white;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  height: 100%;
-  width: 100%;
-  padding: 1rem;
-}
-
-.socls .cntnt .soclhndls .socialbx {
+  padding: 1em;
+  border-radius: 1em;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 18rem;
-  background: #dfe0e2ff;
-  border: 1px solid black;
-  margin: 3rem;
-  padding: 20px;
-  border-radius: 2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+  -webkit-filter: drop-shadow(0 0 1rem #f9f9f96e);
+          filter: drop-shadow(0 0 1rem #f9f9f96e);
 }
 
-.socls .cntnt .soclhndls .socialbx:hover {
-  background: #17d8ffd5;
+.socls .box .sryt .socialbx:hover {
+  background: #17d8ff4f;
+}
+
+.socls .box .sryt .socialbx .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3px 0;
+}
+
+.socls .box .sryt .socialbx .heading .hlogo {
+  padding: 0 10px;
+}
+
+.socls .box .sryt .socialbx .heading .hlogo img {
+  width: 1.5em;
+  height: 1.7em;
+}
+
+.socls .box .sryt .socialbx .heading h2 {
   color: black;
+  font-family: "Syncopate", sans-serif;
+  font-size: 1em;
+  text-align: center;
+  font-weight: 800;
+}
+
+.socls .box .sryt .socialbx .scltxt p {
+  color: rgba(5, 5, 5, 0.9);
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -658,6 +741,9 @@ nav .hamburger .fa {
   .about .btm .left .cntnt p {
     font-size: 1rem;
     padding: 2px 0;
+  }
+  .about .btm .ryt {
+    padding-bottom: 0rem;
   }
   .about .btm .ryt img {
     width: 15rem;
