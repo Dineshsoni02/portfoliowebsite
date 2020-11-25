@@ -125,7 +125,6 @@ body {
   left: 0;
   background: $optional;
   z-index: 12;
-  transform: translateY(-90%);
   transition: all 0.3s;
   li {
     a {
@@ -147,11 +146,6 @@ body {
   }
 }
 nav {
-  &:hover {
-    transform: translateY(0px);
-    transition: all 0.3s;
-    filter: drop-shadow(0px -2px 1rem $fadeblue);
-  }
   background: rgba(5, 5, 5, 0.9);
   filter: drop-shadow(0px 8px 1rem $fadeblue);
   width: 100%;
@@ -159,9 +153,9 @@ nav {
   justify-content: space-around;
   align-items: center;
   .logo {
-    font-family: $logo;
-    font-size: 2.1rem;
     a {
+      font-size: 2.1rem;
+      font-family: $logo;
       color: $blue;
     }
   }
@@ -437,108 +431,142 @@ nav {
   width: 100%;
   height: 100vh;
   position: relative;
-  &::before {
-    content: "socials";
-    position: absolute;
-    z-index: 1;
-    font-size: 4em;
-    letter-spacing: 8px;
-    // font-weight: 900;
-    top: 4em;
-    text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.27);
-    writing-mode: vertical-rl;
-    writing-mode: horizontal-tb;
-    // writing-mode: vertical-lr;
-    font-family: "Asset", cursive;
-    // text-orientation: upright;
-    left: 5em;
-    opacity: 0.3;
-    pointer-events: none;
+}
+
+.socls .box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.socls .box .sleft::before {
+  content: "";
+  position: absolute;
+  background: url("https://images.pexels.com/photos/3022403/pexels-photo-3022403.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 50%;
+  height: 100%;
+  opacity: 0.4;
+}
+.socls .box .sleft {
+  width: 40%;
+  color: $fadeblack;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 4em;
+  font-family: "Syncopate", sans-serif;
+  padding: 1em;
+}
+.socls .box .sryt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background: $optional;
+  height: 100%;
+}
+.socls .box .sryt .socialbx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #f8f8f9b7;
+  padding: 1em;
+  border-radius: 1em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+  -webkit-filter: drop-shadow(0 0 1rem #f9f9f96e);
+  filter: drop-shadow(12px 2em 1rem #463c3c6e);
+  width: 290px;
+  height: 6.5em;
+}
+.socls .box .sryt .socialbx:hover {
+  background: #17d8ff4f;
+}
+.socls .box .sryt .socialbx .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 3px 0;
+}
+.socls .box .sryt .socialbx .heading .hlogo {
+  padding: 0 10px;
+}
+.socls .box .sryt .socialbx .heading .hlogo img {
+  width: 1.5em;
+  height: 1.7em;
+}
+.socls .box .sryt .socialbx .heading h2 {
+  color: black;
+  font-family: "Syncopate", sans-serif;
+  font-size: 1em;
+  text-align: center;
+  font-weight: 800;
+}
+.socls .box .sryt .socialbx .scltxt p {
+  color: rgba(5, 5, 5, 0.9);
+}
+@media (max-width: 411px) {
+  .socls .box .sryt .socialbx .scltxt p {
+    display: none;
   }
-  .box {
-    color: ivory;
+  .socls .box .sryt .socialbx {
+    width: 165px !important;
+    height: 80px;
+  }
+  .socls .box .sryt .socialbx .heading h2 {
+    color: black;
+    font-family: "Syncopate", sans-serif;
+    font-size: 0.81em;
+    text-align: center;
+    font-weight: 800;
+  }
+  .projects .container1 .card {
+    position: relative !important;
+    margin: 5px 0 !important;
+    height: 160px !important;
+    width: 270px !important;
+}
+}
+@media (max-width: 900px) {
+  .socls .box .sleft::before {
     width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    &::before {
-      content: "";
-      position: absolute;
-      background: url("https://images.pexels.com/photos/3022403/pexels-photo-3022403.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      top: 0;
-      left: 0;
-      // background: olive;
-      z-index:-1;
-      width: 50rem;
-      height: 100%;
-      opacity: 0.5;
-    }
-    .sleft {
-      // background: hotpink;
-      color: $fadeblack;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      h1 {
-        font-size: 4.7em;
-        padding: 0 2em;
-        font-family: $mainfont;
-      }
-    }
-    .sryt {
-      display: grid;
-      grid-template-columns: repeat(2, 2fr);
-      grid-template-rows: repeat(3, 2fr);
-      background: #f9f9f9;
-      grid-gap: 3em;
-      grid-auto-columns: minmax(100px, auto);
-      grid-auto-rows: minmax(100px, auto);
-      padding: 3em;
-      align-items: center;
-      .socialbx {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        background: white;
-        padding: 1em;
-        border-radius: 1em;
-        height: fit-content;
-        width: fit-content;
-        transition: ease 0.3s;
-        filter: drop-shadow(0 0 1rem #f9f9f96e);
-        &:hover {
-          background: #17d8ff4f;
-        }
-        .heading {
-          display: flex;
-          align-items: center;
-          margin: 3px 0;
-          .hlogo {
-            img {
-              width: 1.5em;
-              height: 1.7em;
-            }
-            padding: 0 10px;
-          }
-          h2 {
-            color: black;
-            font-family: $mainfont;
-            font-size: 1em;
-            text-align: center;
-            font-weight: 800;
-          }
-        }
-        .scltxt {
-          p {
-            color: $fadeblack;
-          }
-        }
-      }
-    }
+    height: 60%;
+  }
+  .socls .box .sleft {
+    width: 100%;
+  }
+  .socls .box {
+    flex-direction: column;
   }
 }
 /* Extra small devices (phones, 600px and down) */
@@ -639,10 +667,18 @@ nav {
           width: 15rem;
           border: 12px solid #dfe0e2ff;
           height: 15rem;
-          border-radius: 0% 34%;
+          border-radius: 30% 30%;
         }
       }
     }
+  }
+  .socls .box .sryt .socialbx {
+    width: 280px;
+  }
+  .socls .box .sleft {
+    width: 100%;
+    font-size: 2em;
+    padding: 1em 0;
   }
 }
 
