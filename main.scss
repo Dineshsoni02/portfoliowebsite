@@ -555,7 +555,7 @@ nav {
     margin: 5px 0 !important;
     height: 160px !important;
     width: 270px !important;
-}
+  }
 }
 @media (max-width: 900px) {
   .socls .box .sleft::before {
@@ -680,6 +680,12 @@ nav {
     font-size: 2em;
     padding: 1em 0;
   }
+  .projects {
+    .hdtxt {
+      padding: 4em 0;
+      min-height: 20vh !important;
+    }
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -695,5 +701,12 @@ nav {
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1320px) {
+  .projects {
+    .hdtxt::before {
+      position: absolute;
+      content: "projects";
+      display: none;
+    }
+  }
 }

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Diplomata&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -16,14 +17,40 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
   background: rgba(5, 5, 5, 0.9);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projects .hdtxt {
+  min-width: 100%;
+  min-height: 10vh;
+}
+
+.projects .hdtxt::before {
+  position: absolute;
+  content: "projects";
+  color: #17d8ffd5;
+  font-size: 8em;
+  font-family: 'Diplomata', cursive;
+  left: 25%;
+  z-index: 0;
+  opacity: 0.1;
+}
+
+.projects .hdtxt h1 {
+  font-family: "Syncopate", sans-serif;
+  color: #fff;
+  font-size: 3em;
+  margin-left: 0.58em;
 }
 
 .projects .container1 {
