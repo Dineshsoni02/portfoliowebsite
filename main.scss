@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
 $black: #000000;
 $optional: #dfe0e2ff;
 $blue: #23b5d3ff;
@@ -5,6 +6,7 @@ $pr-blue: #75abbcff;
 $t-blue: #a2aebbff;
 $fadeblack: rgba(5, 5, 5, 0.9);
 $fadeblue: #17d8ffd5;
+
 $gradient-top: linear-gradient(
   0deg,
   #071013ff,
@@ -168,7 +170,7 @@ nav {
     width: 30%;
     li {
       padding: 1rem;
-      font-family: "Syncopate", sans-serif;
+      font-family: $mainfont;
       font-weight: bolder;
       &:hover {
         background-color: #17d8ffd5;
@@ -180,6 +182,7 @@ nav {
       a {
         padding: 5px;
         color: $optional;
+        font-family: "Syncopate", sans-serif;
       }
     }
   }
@@ -251,14 +254,15 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    font-family: "Syncopate", sans-serif;
     h4 {
+      font-family: "Syncopate", sans-serif;
       color: rgba(255, 255, 255, 0.774);
       font-size: 1.5rem;
     }
     h1 {
       font-size: 3rem;
       margin: 25px 0;
+      font-family: "Syncopate", sans-serif;
       span {
         color: $blue;
         font-family: $logo;
@@ -306,9 +310,6 @@ nav {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-
-  font-family: "Syncopate", sans-serif;
-
   h1 {
     color: $black;
     font-size: 4.5rem;
@@ -317,6 +318,7 @@ nav {
     filter: drop-shadow(0rem 0rem 2rem $fadeblue);
   }
   p {
+    font-family: "Syncopate", sans-serif;
     color: rgba(0, 0, 0, 0.916);
     font-size: 1.2rem;
     font-weight: bolder;

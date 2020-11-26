@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -133,6 +134,7 @@ nav ul li:hover a {
 nav ul li a {
   padding: 5px;
   color: #dfe0e2ff;
+  font-family: "Syncopate", sans-serif;
 }
 
 nav .hamburger {
@@ -242,10 +244,10 @@ nav .hamburger .fa {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Syncopate", sans-serif;
 }
 
 .container .hero_text h4 {
+  font-family: "Syncopate", sans-serif;
   color: rgba(255, 255, 255, 0.774);
   font-size: 1.5rem;
 }
@@ -253,6 +255,7 @@ nav .hamburger .fa {
 .container .hero_text h1 {
   font-size: 3rem;
   margin: 25px 0;
+  font-family: "Syncopate", sans-serif;
 }
 
 .container .hero_text h1 span {
@@ -311,7 +314,6 @@ nav .hamburger .fa {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: "Syncopate", sans-serif;
 }
 
 .thought h1 {
@@ -324,6 +326,7 @@ nav .hamburger .fa {
 }
 
 .thought p {
+  font-family: "Syncopate", sans-serif;
   color: rgba(0, 0, 0, 0.916);
   font-size: 1.2rem;
   font-weight: bolder;
