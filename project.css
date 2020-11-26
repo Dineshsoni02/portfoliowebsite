@@ -86,9 +86,9 @@ body {
   max-width: 100px;
 }
 
-.projects .container1 .card .face.face1 h3 {
+.projects .container1 .card .face.face1 h2 {
   margin: 10px 0 0;
-  color: #dfe0e2ff;
+  color: rgba(5, 5, 5, 0.9);
   text-align: center;
   font-size: 1.5em;
 }
