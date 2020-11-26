@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
 $black: #000000;
 $optional: #dfe0e2ff;
 $blue: #23b5d3ff;
@@ -116,6 +116,10 @@ $mainfont: "Syncopate", sans-serif;
   padding: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
+}
+*::selection {
+  color: $fadeblue;
+  background: $fadeblack;
 }
 body {
   height: 100vh;
@@ -510,6 +514,8 @@ nav {
 }
 .socls .box .sryt .socialbx:hover {
   background: #17d8ff4f;
+  filter: drop-shadow(0 0 2em $fadeblue);
+  box-shadow: inset 3px 1px 23px -8px $fadeblack;
 }
 .socls .box .sryt .socialbx .heading {
   display: -webkit-box;

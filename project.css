@@ -98,6 +98,10 @@ body a {
 }
 
 .projects .container1 .card .face.face1 {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   background: #dfe0e2ff;
   display: -webkit-box;
   display: -ms-flexbox;
